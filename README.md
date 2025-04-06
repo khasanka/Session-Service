@@ -2,7 +2,7 @@
 
 ## 📖 Problem Statement
 
-You are developing a **microservice** for a SaaS platform that manages conference presentations.  
+Developing a **microservice** for a SaaS platform that manages conference presentations.  
 This service is responsible for **handling session submissions from speakers** and exposing endpoints for creating, retrieving, updating, and deleting session information.
 
 ---
@@ -110,4 +110,105 @@ java -jar target/session-service.jar server src/main/resources/config.yml
 - Add **rate-limiting** & caching layer
 
 ---
+
+# Part 2: Theoretical Questions – Answer Sheet
+
+---
+
+## 1. AWS Design Question
+
+> Deploy the microservice on AWS in a highly available and scalable manner.
+
+### ✅ Recommended AWS Architecture:
+
+| Component     | AWS Service                | Description |
+|---------------|----------------------------|-------------|
+| Compute       | **AWS Fargate (ECS)**      | Containerized backend, managed by AWS |
+| Database      | **Amazon Aurora MySQL**    | Auto-scaling, high availability RDS |
+| Storage       | **Amazon S3**              | For uploaded session files |
+| Security      | **IAM, API Gateway, WAF**  | Secure API access, rate limiting, DDoS protection |
+| Load Balancer | **Application Load Balancer** | Distributes traffic across Fargate tasks |
+| Scaling       | **Auto Scaling, Multi-AZ** | Handles traffic bursts and zone failures |
+
+---
+
+## 2. Debugging & Performance Optimization
+
+> `/sessions` endpoint takes 10 seconds. How to identify and fix?
+
+### ✅ Steps to Optimize:
+
+1. **Analyze SQL performance** with `EXPLAIN`
+2. **Add proper indexes** on columns like `title`, `speaker`
+3. **Enable Dropwizard metrics** to time DAO layer
+4. **Introduce pagination** (LIMIT, OFFSET)
+5. **Use HikariCP** for connection pooling
+6. **Consider caching** (e.g., Redis for read-heavy workloads)
+
+---
+
+## 3. Security Scenario – Under DDoS
+
+### ✅ Infrastructure Hardening (AWS):
+
+- AWS WAF for IP blocking/rate limiting
+- API Gateway throttling policies
+- CloudFront CDN with edge caching
+- Auto Scaling and health checks
+- Route53 failover routing
+
+### ✅ Code-Level Mitigation:
+
+- Rate-limiting per API key/IP
+- Early rejection before hitting database
+- Input validation & authentication
+- Log and alert on abnormal spikes
+
+---
+
+## 4. Code Review Question
+
+### ❌ Original Code:
+```java
+public List<Session> getSessions() {
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/conferences", "user", "pass");
+    Statement stmt = conn.createStatement();
+    ResultSet rs = stmt.executeQuery("SELECT * FROM sessions");
+    List<Session> sessions = new ArrayList<>();
+    while (rs.next()) {
+        sessions.add(new Session(rs.getInt("id"), rs.getString("title"), rs.getString("description")));
+    }
+    return sessions;
+}
+```
+
+### 🔍 Problems:
+1. ❌ No resource cleanup – no `close()` or try-with-resources
+2. ❌ Hardcoded DB credentials – should be injected via config/env
+3. ❌ No pagination or query limit – leads to slow response on large datasets
+
+---
+
+### ✅ Refactored Version:
+```java
+public List<Session> getSessions() {
+    List<Session> sessions = new ArrayList<>();
+    String sql = "SELECT id, title, description FROM sessions";
+
+    try (Connection conn = dataSource.getConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql);
+         ResultSet rs = stmt.executeQuery()) {
+
+        while (rs.next()) {
+            sessions.add(new Session(
+                rs.getString("id"),
+                rs.getString("title"),
+                rs.getString("description")));
+        }
+    } catch (SQLException ex) {
+        // Handle properly
+    }
+    return sessions;
+}
+```
 
