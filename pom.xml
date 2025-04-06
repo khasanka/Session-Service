@@ -69,7 +69,11 @@
     </dependencies>
 
     <build>
+<<<<<<< HEAD
         <finalName>sessionDTO-service</finalName>
+=======
+        <finalName>session-service</finalName>
+>>>>>>> main
         <plugins>
             <!-- Java Compile Version -->
             <plugin>

@@ -4,59 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f579f5a-6de6-4b84-b849-3c85d59aefee" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/SessionServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/api/SessionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/auth/ApiKeyAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/db/SessionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/exception/GenericExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/exception/SessionNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/model/SessionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/conference/service/SessionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/conference/api/SessionDTOResourceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/conference/auth/ApiKeyAuthFilterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/SessionServiceApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/api/SessionController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/auth/ApiKeyAuthFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/config/AppConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/db/SessionDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/exception/GenericExceptionMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/exception/SessionNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/model/SessionDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/conference/service/SessionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/original-sessionDTO-service.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/sessionDTO-service.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/2025-04-06T17-12-08_282.dumpstream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.conference.api.SessionDTOResourceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.conference.auth.ApiKeyAuthFilterTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/com.conference.api.SessionDTOResourceTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/com.conference.auth.ApiKeyAuthFilterTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/conference/api/SessionDTOResourceTest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/conference/api/SessionDTOResourceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/conference/auth/ApiKeyAuthFilterTest$SecuredResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/conference/auth/ApiKeyAuthFilterTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="5f579f5a-6de6-4b84-b849-3c85d59aefee" name="Changes" comment=".gitignore added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -90,19 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "D:/java projects/session-service",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/java projects/session-service&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -209,11 +162,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in session-service" />
-        <item itemvalue="JUnit.SessionDTOResourceTest" />
-        <item itemvalue="JUnit.SessionDTOResourceTest.testUpdateSessionNotFound" />
         <item itemvalue="JUnit.com.conference in session-service" />
         <item itemvalue="JUnit.ApiKeyAuthFilterTest" />
+        <item itemvalue="JUnit.SessionDTOResourceTest.testUpdateSessionNotFound" />
+        <item itemvalue="JUnit.SessionDTOResourceTest" />
+        <item itemvalue="JUnit.All in session-service" />
       </list>
     </recent_temporary>
   </component>
@@ -226,6 +179,14 @@
       <option name="presentableId" value="Default" />
       <updated>1743655004742</updated>
     </task>
+    <task id="LOCAL-00001" summary=".gitignore added">
+      <created>1743954580526</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743954580526</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,7 +202,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="change jar name" />
+    <MESSAGE value=".gitignore added" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

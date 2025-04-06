@@ -1,0 +1,11 @@
+# IntelliJ IDEA shelf files
+.idea/shelf/
+.idea/workspace.xml
+
+# Build artifacts
+target/original-session-service.jar
+target/session-service.jar
+target/surefire-reports/
+
+# Optionally ignore all .jar files in target/
+# target/*.jar

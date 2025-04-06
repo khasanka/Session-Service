@@ -5,7 +5,11 @@
   <artifactId>session-service</artifactId>
   <version>1.0-SNAPSHOT</version>
   <build>
+<<<<<<< HEAD
     <finalName>sessionDTO-service</finalName>
+=======
+    <finalName>session-service</finalName>
+>>>>>>> main
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
