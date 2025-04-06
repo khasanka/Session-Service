@@ -1,0 +1,9 @@
+com\conference\config\AppConfiguration.class
+com\conference\exception\GenericExceptionMapper.class
+com\conference\model\SessionDTO.class
+com\conference\SessionServiceApplication.class
+com\conference\api\SessionController.class
+com\conference\service\SessionService.class
+com\conference\auth\ApiKeyAuthFilter.class
+com\conference\db\SessionDAO.class
+com\conference\exception\SessionNotFoundException.class
