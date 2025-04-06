@@ -1,0 +1,29 @@
+server:
+  type: default
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+database:
+  driverClass: com.mysql.cj.jdbc.Driver
+  user: ${DB_USER}
+  password: ${DB_PASS}
+  url: ${DB_URL}
+#  user: root
+#  password: admin
+#  url: jdbc:mysql://localhost:3306/sessions
+  properties:
+    charSet: UTF-8
+    useSSL: false
+    serverTimezone: UTC
+  minSize: 5
+  maxSize: 20
+  maxWaitForConnection: 30s
+  checkConnectionWhileIdle: true
+  evictionInterval: 10m
+  minIdleTime: 30m
+
+apiKey: my-secure-api-key

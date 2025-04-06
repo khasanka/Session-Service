@@ -1,0 +1,37 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+replay_pid*
+
+# Maven
+/target/
+/dependency-reduced-pom.xml
+/logs/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse/IntelliJ
+*.iml
+.idea/
+*.ipr
+*.iws
+*.project
+*.classpath
+/.settings/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Other
+*.swp
+*.swo
+*.bak
+*.tmp

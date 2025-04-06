@@ -1,0 +1,4 @@
+com\conference\auth\ApiKeyAuthFilterTest$SecuredResource.class
+com\conference\auth\ApiKeyAuthFilterTest.class
+com\conference\api\SessionDTOResourceTest$1.class
+com\conference\api\SessionDTOResourceTest.class
